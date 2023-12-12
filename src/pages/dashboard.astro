@@ -1,0 +1,15 @@
+---
+import DefaultLayout from '@astro/layouts/default-layout.astro';
+import { getUserByToken } from '@utils/server';
+import DashboardView from '@astro/modules/dashboard/components/page.astro';
+import { SignIn } from '@react/modules/dashboard/components/sign-in';
+
+const token = Astro.cookies.get('token')?.value ?? '';
+const user = await getUserByToken(token);
+
+interface Props {}
+---
+
+<DefaultLayout title='dashboard'>
+  {user ? <DashboardView user={user} /> : <SignIn client:load />}
+</DefaultLayout>

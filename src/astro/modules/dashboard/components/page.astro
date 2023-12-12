@@ -1,0 +1,33 @@
+---
+import { SignOutButton } from '@react/modules/dashboard/components/sign-out-button';
+import { Content } from '@react/modules/dashboard/components/content';
+
+const { user } = Astro.props;
+
+interface Props {
+  user: User;
+}
+---
+
+<div>
+  <header class='bg-white shadow p-4 z-10 sticky top-0'>
+    <div class='max-w-screen-lg mx-auto flex items-center justify-between'>
+      <span class='flex gap-x-4 items-center'>
+        <span class='font-bold border-r-4 pr-4'>
+          <a href='/dashboard'>Dashboard</a>
+        </span><span class='text-gray-600 flex items-center gap-x-2'>
+          <img
+            class='rounded-full w-[30px] h-[30px]'
+            src={`https://ui-avatars.com/api/?background=random&name=${user.username}`}
+            alt={user.username}
+            width='50'
+            height='50'
+          />
+          {user.username}</span
+        >
+      </span>
+      <SignOutButton client:load />
+    </div>
+  </header>
+  <Content user={user} client:load />
+</div>

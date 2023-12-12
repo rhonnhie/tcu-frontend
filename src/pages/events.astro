@@ -1,0 +1,25 @@
+---
+import Header from '@astro/components/header.astro';
+import DefaultLayout from '@astro/layouts/default-layout.astro';
+import { ChatPopUp } from '@react/components/chat-popup';
+import { EventCards } from '@react/components/event-cards';
+interface Props {}
+---
+
+<DefaultLayout title='Events | Taguig City University'>
+  <Header />
+  <ChatPopUp client:load />
+  <div class='p-4 min-h-screen'>
+    <h1
+      class='text-blue-500 drop-shadow-sm font-bold text-3xl border-l-8 border-l-blue-500 pl-4 uppercase'
+    >
+      Events
+    </h1>
+    <EventCards client:visible />
+  </div>
+  <footer class='bg-blue-950 p-4'>
+    <div class=''>
+      <p class='text-gray-400'>&copy; 2023</p>
+    </div>
+  </footer>
+</DefaultLayout>

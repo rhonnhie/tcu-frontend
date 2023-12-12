@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .dashboard-table {
+    @apply w-full;
+  }
+
+  .dashboard-table > thead tr {
+    @apply border-b-2 capitalize;
+  } 
+
+  .dashboard-table > thead tr th {
+    @apply pb-4 text-left;
+  }
+
+  .assistant-message-container {
+    @apply overflow-hidden overflow-y-auto max-h-[400px] font-light;
+  }
+
+  .assistant-message-container a {
+    @apply underline;
+  }
+}

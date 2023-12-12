@@ -1,0 +1,27 @@
+import { getData } from '@utils/common';
+
+export const getUserByToken = async function getUserByToken(
+  token: string,
+): Promise<User | null> {
+  try {
+    const data = await getData<{ user: User }>(
+      fetch(`https://tcu-backend.onrender.com/user/session`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }),
+    );
+
+    if (data instanceof Error) {
+      throw data;
+    }
+
+    return data.user;
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(error);
+    }
+
+    return null;
+  }
+};
