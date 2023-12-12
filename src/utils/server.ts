@@ -5,7 +5,7 @@ export const getUserByToken = async function getUserByToken(
 ): Promise<User | null> {
   try {
     const data = await getData<{ user: User }>(
-      fetch(`https://tcu-backend.onrender.com/user/session`, {
+      fetch('https://taguig-backend.onrender.com/user/session', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
