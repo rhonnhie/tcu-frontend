@@ -11,7 +11,7 @@ export default defineConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'https://tcu-backend.onrender.com',
+          target: 'https://taguig-backend.onrender.com',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
         },
