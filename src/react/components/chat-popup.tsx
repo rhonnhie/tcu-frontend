@@ -13,7 +13,7 @@ export const ChatPopUp = function ChatPopUp() {
     {
       role: 'assistant',
       content:
-        'Hello! I am E-TCU, the school helpdesk for Taguig City University (TCU). I am here to provide you with information about the school and answer any questions you may have. How may I assist you today?',
+        'Hello! I am E-TCU, the school helpdesk for Taguig City University (TCU).',
     },
   ]);
   const submitButtonRef = useRef<HTMLButtonElement>(null);
@@ -106,11 +106,11 @@ export const ChatPopUp = function ChatPopUp() {
       }`}
     >
       <div
-        className={`bg-white rounded shadow mb-20 w-[calc(100vw-2rem)] max-h-[calc(100vh-10rem)] lg:max-h-none lg:w-[350px] transition-transform ${
+        className={`bg-white rounded shadow mb-20 w-[calc(100vw-2rem)] max-h-[calc(100vh-10rem)] lg:max-h-none lg:w-[1000px] transition-transform ${
           show ? 'scale-100 visible' : 'scale-0 invisible'
         }`}
       >
-        <header className='bg-blue-500 rounded-t p-4 text-white flex items-center justify-between'>
+        <header className='bg-gray-500 rounded-t p-4 text-white flex items-center justify-between'>
           <p className='flex items-center gap-x-2'>
             <span className='w-2 h-2 inline-block rounded-full bg-green-500' />
             Chat Assistant
@@ -133,14 +133,14 @@ export const ChatPopUp = function ChatPopUp() {
           </button>
         </header>
         <section className='p-4 pb-0'>
-          <div className='assistant-message-container text-xs lg:text-base max-h-[220px] lg:max-h-[300px]'>
+          <div className='assistant-message-container text-2xl lg:text-base max-h-[400px] lg:max-h-[400px]'>
             {conversation.map((message, index) => {
               if (message.role === 'assistant') {
                 return (
                   <div key={index} className='mb-4' ref={lastMessageRef}>
                     <pre
                       key={index}
-                      className='font-sans whitespace-pre-wrap p-4 bg-blue-500 text-white max-w-[80%] inline-block rounded-xl rounded-bl-none'
+                      className='font-sans whitespace-pre-wrap p-4 bg-gray-700 text-white max-w-[80%] inline-block rounded-xl rounded-bl-none'
                     >
                       <Markdown remarkPlugins={[remarkGfm]}>
                         {message.content}
@@ -165,7 +165,7 @@ export const ChatPopUp = function ChatPopUp() {
 
             {isLoading && (
               <div className='mb-4' ref={lastMessageRef}>
-                <p className='font-sans whitespace-pre-wrap p-4 bg-blue-500 text-white inline-block rounded-xl rounded-bl-none'>
+                <p className='font-sans whitespace-pre-wrap p-4 bg-Stone-400 text-white inline-block rounded-xl rounded-bl-none'>
                   Typing..
                 </p>
               </div>
@@ -181,7 +181,7 @@ export const ChatPopUp = function ChatPopUp() {
         >
           {questionsSuggestions.map((suggestion, index) => (
             <p
-              className='text-xs px-2 py-1 rounded-lg ring ring-blue-500 text-blue-500 md:cursor-pointer'
+              className='text-xl px-2 py-1 rounded-lg ring ring- stone-400 text-Stone-700 md:cursor-pointer'
               key={index}
               onClick={() => {
                 setValue('content', suggestion);
