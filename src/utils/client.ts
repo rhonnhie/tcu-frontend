@@ -42,13 +42,9 @@ function getRandomElements<T>(array: T[], length: number) {
 export const getRandomFallbackQuestionSuggestions = () => {
   // Add more fallback questions if necessary
   const FALLBACK_QUESTION_SUGGESTIONS: string[] = [
-    'Could you provide information about the mission statement of TCU?',
-    'Could you please provide concise instructions for enrollment?',
-    'Could you please provide me with the complete address of the school?',
-    'Dress code for male students',
-    'Dress code for female students',
-    'What are the available courses at TCU?',
-    'When is the enrollment period for TCU?',
+    'What are the requirements for Incoming Freshmen?',
+    'When is the Entrance Exam for Freshmen?',
+    'When is the deadline for submitting the application for admission?',
   ];
 
   return getRandomElements<string>(FALLBACK_QUESTION_SUGGESTIONS, 3);
