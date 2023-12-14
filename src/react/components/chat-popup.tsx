@@ -106,7 +106,7 @@ export const ChatPopUp = function ChatPopUp() {
       }`}
     >
       <div
-        className={`bg-white rounded shadow mb-20 w-[calc(100vw-2rem)] max-h-[calc(100vh-10rem)] lg:max-h-none lg:w-[480px] transition-transform ${
+        className={`bg-white rounded shadow mb-20 w-[calc(100vw-2rem)] max-h-[calc(100vh-10rem)] lg:max-h-none lg:w-[400px] transition-transform ${
           show ? 'scale-100 visible' : 'scale-0 invisible'
         }`}
       >
