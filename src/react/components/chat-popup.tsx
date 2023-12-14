@@ -197,7 +197,7 @@ export const ChatPopUp = function ChatPopUp() {
           onSubmit={onSubmit}
         >
           <textarea
-            className='rounded grow max-h-50 resize-none text-lg lg:text-base'
+            className='rounded grow max-h-70 resize-none text-xl lg:text-base'
             placeholder='Aa'
             onKeyDown={handleInput}
             disabled={isLoading}
