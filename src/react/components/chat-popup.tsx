@@ -181,7 +181,7 @@ export const ChatPopUp = function ChatPopUp() {
         >
           {questionsSuggestions.map((suggestion, index) => (
             <p
-              className='text-lg px-2 py-1 rounded-lg ring ring- stone-400 text-Stone-700 md:cursor-pointer'
+              className='text-sm px-2 py-1 rounded-lg ring ring- stone-500 text-Stone-500 md:cursor-pointer'
               key={index}
               onClick={() => {
                 setValue('content', suggestion);
