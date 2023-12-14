@@ -133,7 +133,7 @@ export const ChatPopUp = function ChatPopUp() {
           </button>
         </header>
         <section className='p-4 pb-0'>
-          <div className='assistant-message-container text-2xl lg:text-base max-h-[400px] lg:max-h-[400px]'>
+          <div className='assistant-message-container text-lg lg:text-base max-h-[400px] lg:max-h-[400px]'>
             {conversation.map((message, index) => {
               if (message.role === 'assistant') {
                 return (
