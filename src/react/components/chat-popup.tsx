@@ -133,7 +133,7 @@ export const ChatPopUp = function ChatPopUp() {
           </button>
         </header>
         <section className='p-4 pb-0'>
-          <div className='assistant-message-container text-sm lg:text-base max-h-[300px] lg:max-h-[350px]'>
+          <div className='assistant-message-container text-lg lg:text-base max-h-[300px] lg:max-h-[35 0px]'>
             {conversation.map((message, index) => {
               if (message.role === 'assistant') {
                 return (
@@ -181,7 +181,7 @@ export const ChatPopUp = function ChatPopUp() {
         >
           {questionsSuggestions.map((suggestion, index) => (
             <p
-              className='text-sm px-2 py-1 rounded-lg ring ring- stone-400 text-Stone-700 md:cursor-pointer'
+              className='text-lg px-2 py-1 rounded-lg ring ring- stone-400 text-Stone-700 md:cursor-pointer'
               key={index}
               onClick={() => {
                 setValue('content', suggestion);
@@ -197,7 +197,7 @@ export const ChatPopUp = function ChatPopUp() {
           onSubmit={onSubmit}
         >
           <textarea
-            className='rounded grow max-h-70 resize-none text-xl lg:text-base'
+            className='rounded grow max-h-60 resize-none text-lg lg:text-base'
             placeholder='Aa'
             onKeyDown={handleInput}
             disabled={isLoading}
