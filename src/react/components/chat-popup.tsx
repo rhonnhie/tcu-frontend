@@ -165,7 +165,7 @@ export const ChatPopUp = function ChatPopUp() {
 
             {isLoading && (
               <div className='mb-4' ref={lastMessageRef}>
-                <p className='font-sans whitespace-pre-wrap p-4 bg-Stone-400 text-white inline-block rounded-xl rounded-bl-none'>
+                <p className='font-sans whitespace-pre-wrap p-4 bg-Stone-950 text-stone inline-block rounded-xl rounded-bl-none'>
                   Typing..
                 </p>
               </div>
