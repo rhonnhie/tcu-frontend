@@ -106,7 +106,7 @@ export const ChatPopUp = function ChatPopUp() {
       }`}
     >
       <div
-        className={`bg-white rounded shadow mb-20 w-[calc(100vw-2rem)] max-h-[calc(100vh-10rem)] lg:max-h-none lg:w-[250px] transition-transform ${
+        className={`bg-white rounded shadow mb-20 w-[calc(100vw-2rem)] max-h-[calc(100vh-10rem)] lg:max-h-none lg:w-[480px] transition-transform ${
           show ? 'scale-100 visible' : 'scale-0 invisible'
         }`}
       >
@@ -133,7 +133,7 @@ export const ChatPopUp = function ChatPopUp() {
           </button>
         </header>
         <section className='p-4 pb-0'>
-          <div className='assistant-message-container text-sm lg:text-base max-h-[200px] lg:max-h-[200px]'>
+          <div className='assistant-message-container text-sm lg:text-base max-h-[220px] lg:max-h-[300px]'>
             {conversation.map((message, index) => {
               if (message.role === 'assistant') {
                 return (
