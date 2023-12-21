@@ -44,7 +44,7 @@ export const ChatPopUp = function ChatPopUp() {
 
       setValue('content', '');
       setQuestionSuggestions([]);
-    }, 1000);
+    }, 100);
 
     const response = await getData<{ data: AssistantResponse }>(
       fetch('/api/assistant/ask', {
