@@ -11,7 +11,7 @@ app
   .use(
     '/api',
     createProxyMiddleware({
-      target: 'https://taguig-backend.onrender.com',
+      target: 'http://localhost:3001/',
       changeOrigin: true,
       pathRewrite: (path) => path.replace(/^\/api/, ''),
     }),

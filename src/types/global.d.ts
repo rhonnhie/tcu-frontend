@@ -8,6 +8,10 @@ declare global {
       photo: true;
       attachments: true;
     };
+
+  }>;
+
+  export declare type Question = Prisma.QuestionGetPayload<{
   }>;
 
   export declare type AppEvent = Prisma.EventGetPayload<{

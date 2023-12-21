@@ -1,11 +1,11 @@
 import { getData } from '@utils/common';
-
+// https://taguig-backend.onrender.com
 export const getUserByToken = async function getUserByToken(
   token: string,
 ): Promise<User | null> {
   try {
     const data = await getData<{ user: User }>(
-      fetch('https://taguig-backend.onrender.com/user/session', {
+      fetch('http://localhost:3001/user/session', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

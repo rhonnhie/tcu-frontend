@@ -27,7 +27,21 @@ export const SignIn = function SignIn() {
 
     if (data instanceof Error) {
       return toast.error(data.message);
-    }
+    } 
+    // else {
+    //   function displayAllProperties(obj: any): string {
+    //     return JSON.stringify(obj, (key, value) => {
+    //       if (value instanceof Object && !(value instanceof Array)) {
+    //         return Object.entries(value)
+    //           .map(([nestedKey, nestedValue]) => `${nestedKey}: ${nestedValue}`)
+    //           .join(', ');
+    //       }
+    //       return value;
+    //     });
+    //   }
+      
+    //   // return toast.error(displayAllProperties(data));
+    // }
 
     setCookie('token', data.token);
     location.reload();

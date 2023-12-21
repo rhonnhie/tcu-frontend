@@ -3,6 +3,10 @@ import {
   Announcements,
   type Props as AnnouncementsProps,
 } from './announcements';
+import {
+  Questions,
+  type Props as QuestionsProps,
+} from './questions';
 import { Events, type Props as EventsProps } from './events';
 import { SideNav } from '@react/modules/dashboard/components/side-nav';
 import { Register } from './register';
@@ -22,7 +26,7 @@ export const Content = function Content(props) {
   );
 } satisfies FC<Props>;
 
-function getView(view: ContentView, props: AnnouncementsProps | EventsProps) {
+function getView(view: ContentView, props: AnnouncementsProps | EventsProps | QuestionsProps) {
   switch (view) {
     case ContentView.announcements:
       return <Announcements {...props} />;
@@ -30,6 +34,8 @@ function getView(view: ContentView, props: AnnouncementsProps | EventsProps) {
       return <Events {...props} />;
     case ContentView.register:
       return <Register {...props} />;
+    case ContentView.question:
+      return <Questions {...props} />;
     default:
       return null;
   }
@@ -43,4 +49,5 @@ export enum ContentView {
   announcements,
   events,
   register,
+  question
 }

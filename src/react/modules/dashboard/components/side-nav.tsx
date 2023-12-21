@@ -65,6 +65,19 @@ export const SideNav = function SideNav(props) {
 
         <span className='hidden md:inline'>Register</span>
       </button>
+
+      <button
+        className={`${
+          view === ContentView.register ? 'bg-blue-600' : 'bg-blue-500'
+        } hover:bg-blue-600 text-white rounded w-full px-4 py-2 flex gap-x-2 items-center`}
+        type='button'
+        title='Register'
+        onClick={() => setView(ContentView.question)}
+      >
+       <svg xmlns="http://www.w3.org/2000/svg" width="24"  className='w-6 h-6' height="24" viewBox="0 0 24 24" fill="currentColor" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+
+        <span className='hidden md:inline'>Questions</span>
+      </button>
     </nav>
   );
 } satisfies FC<Props>;

@@ -62,7 +62,7 @@ export const ChatPopUp = function ChatPopUp() {
 
     if (response instanceof Error) {
       toast.error(response.message);
-
+      
       return;
     }
 
